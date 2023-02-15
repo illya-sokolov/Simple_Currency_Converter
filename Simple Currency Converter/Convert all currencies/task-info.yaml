@@ -1,0 +1,28 @@
+type: remote_edu
+files:
+- name: main.js
+  visible: true
+  text: |-
+    //Write your code here
+    console.log(`WELCOME TO THE CARNIVAL GIFT SHOP!
+    Hello friend! Thank you for visiting the carnival!
+    Here's the list of gifts:
+    Teddy Bear
+    Big Red Ball
+    Huge Bear
+    Candy
+    Stuffed Tiger
+    Stuffed Dragon
+    Skateboard
+    Toy Car
+    Basketball
+    Scary Mask
+    `);
+  learner_created: false
+- name: tests.py
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/projects/231/stages/1159/implement#comment
+check_profile: hyperskill_node_javascript
+status: Unchecked
+record: -1
