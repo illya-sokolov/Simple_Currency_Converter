@@ -47,25 +47,25 @@ function convertCurrency() {
     const inputCurrency = convertFrom.toUpperCase();
     if (!currencies.hasOwnProperty(inputCurrency)) {
         console.log('Unknown currency');
-        return;
+        makeChoice();
     }
 
     const convertTo = input(`To: `);
     const targetCurrency = convertTo.toUpperCase();
     if (!currencies.hasOwnProperty(targetCurrency)) {
         console.log('Unknown currency');
-        return;
+        makeChoice();
     }
 
     const amount = input(`Amount: `);
     const userAmount = Number(amount);
     if (userAmount < 1) {
         console.log('The amount cannot be less than 1');
-        return;
+        makeChoice();
     }
     if (isNaN(userAmount)) {
         console.log('The amount has to be a number');
-        return;
+        makeChoice();
     }
 
     const result = (
@@ -78,4 +78,20 @@ function convertCurrency() {
     );
 }
 
-convertCurrency();
+function makeChoice() {
+    console.log('What do you want to do?');
+    let choice = input('1-Convert currencies 2-Exit program\n');
+    switch (choice) {
+        case '1':
+            convertCurrency();
+            break;
+        case '2':
+            console.log('Have a nice day!');
+            break;
+        default:
+            console.log('Unknown input');
+            makeChoice();
+    }
+}
+
+makeChoice();
